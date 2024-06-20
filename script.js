@@ -19,8 +19,8 @@ function drawPixel(clr) {
   pixel.ondblclick = function() {
     currentPixel = this.id; 
     var elems = document.querySelectorAll(".pixel")
-    Object.keys(elems).forEach(function (k) {
-      if (elems[k] != this) {
+    Object.keys(elems).forEach(function (k,elem2) {
+      if (elems[k].id != currentPixel) {
         elems[k].style.visibility = "hidden"
       }
     })
