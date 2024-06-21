@@ -3,6 +3,7 @@ var pnum = 0;
 var currentPixel = false;
 var pxsize = 10;
 document.querySelectorAll("input[type='range']")[0].value = size
+document.querySelectorAll("input[type='range']")[1].value = 4
 
 function resize(digit) {
   switch (digit) {
