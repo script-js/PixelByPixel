@@ -35,6 +35,7 @@ function color() {
     Object.keys(elems).forEach(function (k) {
       elems[k].style.visibility = "visible"
     })
+    currentPixel = false;
   } else {
     drawPixel(colorType.value)
   }
