@@ -10,7 +10,7 @@ function resize(nsize) {
 function drawPixel(clr) {
   var pixel = document.createElement("div")
   pixel.classList = "pixel";
-  pixel.style = "background:" + clr + ";width:" + size + "%;";
+  pixel.style = "background:" + clr
   pixel.id = "pixel" + pnum;
   pnum += 1;
   pixel.onclick = function() {
