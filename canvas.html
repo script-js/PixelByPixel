@@ -16,14 +16,15 @@
       <br>
       Pixel Density: <input type="range" max="4" min="1" onchange="resize(this.value)" />
       <br>
-      <input type="color" value="#ffffff" id="showColorB" onchange="colorTypeB.value = this.value" /><input id="colorTypeB" onchange="showColorB.value = w3color(this.value.toLowerCase()).toHexString()" value="white" /><button onclick="canvas.style.background = colorTypeB.value">Save</button>
-      <br>
       Aspect Ratio: <select onchange="aratio(this.value)">
         <option>1:1</option>
         <option>16:9</option>
         <option>4:3</option>
         <option>9:16</option>
       </select>
+      <br>
+      Background Color:
+      <input type="color" value="#ffffff" id="showColorB" onchange="colorTypeB.value = this.value" /><input id="colorTypeB" onchange="showColorB.value = w3color(this.value.toLowerCase()).toHexString()" value="white" /><button onclick="canvas.style.background = colorTypeB.value">Save</button>
     </div>
   </body>
   <script src="script.js"></script>
