@@ -35,4 +35,8 @@ body,html {
   float: right;
 }
 
+input {
+  height: 16px;
+}
+
 * {scrollbar-width:none;font-family: "Inter", sans-serif;}
