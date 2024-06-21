@@ -1,13 +1,10 @@
-var size = 10;
+var size = 80;
 var pnum = 0;
 var currentPixel = false;
 
 function resize(nsize) {
   size = nsize
-  var elems = document.querySelectorAll(".pixel")
-  Object.keys(elems).forEach(function (k) {
-    elems[k].style.width = size + "%"
-  })
+  canvas.style.width = size + "%"
 }
 
 function drawPixel(clr) {
