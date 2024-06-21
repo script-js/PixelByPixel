@@ -2,3 +2,21 @@
   aspect-ratio : 1 / 1;
   display: inline-block;
 }
+
+#canvas {
+  border: 2px solid black;
+  height: 100%;
+  width: 90%
+}
+
+body,html {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  width: 9%;
+  height: 100%;
+  text-align: center;
+  border: 2px solid black;
+}
