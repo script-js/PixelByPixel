@@ -21,7 +21,7 @@ function drawPixel(clr) {
     var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k,elem2) {
       if (elems[k].id != currentPixel) {
-        elems[k].style.visibility = "hidden"
+        elems[k].style.opacity = "0.5"
       }
     })
   }
@@ -33,7 +33,7 @@ function color() {
     document.getElementById(currentPixel).style.background = colorType.value
     var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k) {
-      elems[k].style.visibility = "visible"
+      elems[k].style.opacity = "1"
     })
     currentPixel = false;
   } else {
