@@ -16,7 +16,7 @@ function drawPixel(clr) {
   pixel.style = "background:" + clr + ";width:" + size + "%;";
   pixel.id = "pixel" + pnum;
   pnum += 1;
-  pixel.ondblclick = function() {
+  pixel.onclick = function() {
     currentPixel = this.id; 
     var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k,elem2) {
