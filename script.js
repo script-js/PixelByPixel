@@ -1,4 +1,4 @@
-var size = 80;
+var size = 78;
 var pnum = 0;
 var currentPixel = false;
 document.querySelectorAll("input[type='range']")[0].value = size
