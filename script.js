@@ -1,6 +1,7 @@
 var size = 80;
 var pnum = 0;
 var currentPixel = false;
+document.querySelectorAll("input[type='range']")[0].value = size
 
 function resize(nsize) {
   size = nsize
