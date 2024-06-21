@@ -6,7 +6,12 @@
   </head>
   <body>
     <div id="canvas"></div>
-    <div class="sidebar"><input type="color" id="showColor" onchange="colorType.value = this.value" /><br><input id="colorType" onchange="showColor.value = w3color(this.value.toLowerCase()).toHexString()" /></div>
+    <div class="sidebar">
+      <input type="color" id="showColor" onchange="colorType.value = this.value" />
+      <br>
+      <input id="colorType" onchange="showColor.value = w3color(this.value.toLowerCase()).toHexString()" />
+      <p><button onclick="color()">Create</button></p>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
