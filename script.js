@@ -1,11 +1,20 @@
 var size = 78;
 var pnum = 0;
 var currentPixel = false;
+var pxsize = 10;
 document.querySelectorAll("input[type='range']")[0].value = size
 
-function resize(nsize) {
-  size = nsize
-  canvas.style.width = size + "%"
+function resize(digit) {
+  switch (digit) {
+    case "1": pxsize = 2
+    case "2": pxsize = 4
+    case "3": pxsize = 5
+    case "4": pxsize = 10
+  }
+  var elems = document.querySelectorAll(".pixel")
+  Object.keys(elems).forEach(function (k) {
+    elems[k].style.width = pxsize + "%"
+  })
 }
 
 function aratio(ratio) {
@@ -15,7 +24,7 @@ function aratio(ratio) {
 function drawPixel(clr) {
   var pixel = document.createElement("div")
   pixel.classList = "pixel";
-  pixel.style = "background:" + clr
+  pixel.style = "background:" + clr + ";width:" + pxsize + "%;";
   pixel.id = "pixel" + pnum;
   pnum += 1;
   pixel.onclick = function() {
