@@ -6,10 +6,10 @@ document.querySelectorAll("input[type='range']")[0].value = size
 
 function resize(digit) {
   switch (digit) {
-    case "1": pxsize = 2
-    case "2": pxsize = 4
-    case "3": pxsize = 5
-    case "4": pxsize = 10
+    case "4": pxsize = 2
+    case "3": pxsize = 4
+    case "2": pxsize = 5
+    case "1": pxsize = 10
   }
   var elems = document.querySelectorAll(".pixel")
   Object.keys(elems).forEach(function (k) {
