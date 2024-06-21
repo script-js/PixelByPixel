@@ -7,6 +7,10 @@ function resize(nsize) {
   canvas.style.width = size + "%"
 }
 
+function aratio(ratio) {
+  canvas.style.aspectRatio = ratio.replace(":"," / ")
+}
+
 function drawPixel(clr) {
   var pixel = document.createElement("div")
   pixel.classList = "pixel";
