@@ -19,6 +19,7 @@
   display: inline-block;
   background: white;
   transition: ease 100ms;
+  font-size: 0px;
 }
 
 body,html {
