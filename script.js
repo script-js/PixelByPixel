@@ -24,6 +24,16 @@ function drawPixel(clr) {
         elems[k].style.opacity = "0.5"
       }
     })
+    window.onclick = function(event) {
+      if (event.target != document.getElementById(currentPixel)) {
+    var elems = document.querySelectorAll(".pixel")
+    Object.keys(elems).forEach(function (k) {
+      elems[k].style.opacity = "1"
+    })
+    currentPixel = false;
+window.onclick = null
+      }
+} 
   }
   canvas.appendChild(pixel)
 }
