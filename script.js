@@ -2,6 +2,7 @@ var size = 78;
 var pnum = 0;
 var currentPixel = false;
 var pxsize = 10;
+var redoColor = []
 document.querySelectorAll("input[type='range']")[0].value = size
 document.querySelectorAll("input[type='range']")[1].value = 1
 
@@ -64,3 +65,18 @@ function color() {
     drawPixel(colorType.value)
   }
 }
+
+addEventListener("keydown", function(event) {
+  if (event.ctrlKey) {
+    if (event.key == "z") {
+      redoColor[(redoColor.length + 1)] = document.getElementById("pixel" + (pnum - 1)).style.backgroundColor;
+      document.getElementById("pixel" + (pnum - 1)).remove();
+      pnum -= 1;
+    } else if (event.key == "y") {
+      if (redoColor[0]) {
+        drawPixel(redoColor[0])
+        delete redoColor[0]
+      }
+    }
+  }
+});
