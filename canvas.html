@@ -7,9 +7,12 @@
   <body>
     <div id="canvas"></div>
     <div class="sidebar">
+      <p></p>
       <input type="color" id="showColor" onchange="colorType.value = this.value" />
       <br>
       <input id="colorType" onchange="showColor.value = w3color(this.value.toLowerCase()).toHexString()" />
+      <br>
+      Pixel Size: <input type="range" max="10" min="1" onchange="resize(this.value)" />
       <p><button onclick="color()">Create</button></p>
     </div>
   </body>
