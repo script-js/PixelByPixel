@@ -1,5 +1,6 @@
 .pixel {
   aspect-ratio : 1 / 1;
+  width: 10%;
   display: inline-block;
   transition: ease 100ms;
 }
@@ -9,8 +10,8 @@
 }
 
 #canvas {
-  height: 97%;
   width: 80%;
+  aspect-ratio : 1 / 1;
   display: inline-block;
 }
 
