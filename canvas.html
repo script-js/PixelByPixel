@@ -2,10 +2,11 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.w3schools.com/lib/w3color.js"></script>
   </head>
   <body>
     <div id="canvas"></div>
-    <div id="sidebar"></div>
+    <div id="sidebar"><input type="color" id="showColor" onchange="colorType.value = this.value" /><br><input id="colorType" onchange="showColor.value = w3color(this.value).toHexString()" /></div>
   </body>
   <script src="script.js"></script>
 </html>
