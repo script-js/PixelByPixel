@@ -9,7 +9,6 @@
 }
 
 #canvas {
-  border: 2px solid black;
   height: 97%;
   width: 80%;
   display: inline-block;
@@ -28,3 +27,5 @@ body,html {
   display: inline-block;
   float: right;
 }
+
+* {scrollbar-width:none}
