@@ -1,6 +1,11 @@
 .pixel {
   aspect-ratio : 1 / 1;
   display: inline-block;
+  transition: ease 100ms;
+}
+
+.pixel:hover {
+  border: 1px solid black;
 }
 
 #canvas {
