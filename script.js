@@ -46,6 +46,7 @@ function color() {
       elems[k].style.opacity = "1"
     })
     currentPixel = false;
+    window.onclick = null
   } else {
     drawPixel(colorType.value)
   }
