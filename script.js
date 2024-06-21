@@ -7,11 +7,12 @@ document.querySelectorAll("input[type='range']")[1].value = 4
 
 function resize(digit) {
   switch (digit) {
-    case "4": pxsize = 2
-    case "3": pxsize = 4
-    case "2": pxsize = 5
-    case "1": pxsize = 10
-  }
+  case "4": pxsize = 2; break;
+  case "3": pxsize = 4; break;
+  case "2": pxsize = 5; break;
+  case "1": pxsize = 10; break;
+}
+
   var elems = document.querySelectorAll(".pixel")
   Object.keys(elems).forEach(function (k) {
     elems[k].style.width = pxsize + "%"
