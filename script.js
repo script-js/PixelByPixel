@@ -40,14 +40,14 @@ function drawPixel(clr) {
         elems[k].style.opacity = "0.5"
       }
     })
-    canvas.onclick = function(event) {
+    window.onclick = function(event) {
       if (event.target != document.getElementById(currentPixel)) {
     var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k) {
       elems[k].style.opacity = "1"
     })
     currentPixel = false;
-canvas.onclick = null
+window.onclick = null
       }
 } 
   }
@@ -62,7 +62,7 @@ function color() {
       elems[k].style.opacity = "1"
     })
     currentPixel = false;
-    canvas.onclick = null
+    window.onclick = null
   } else {
     drawPixel(colorType.value)
   }
@@ -107,14 +107,14 @@ if (sessionStorage.getItem("session")) {
         elems[k].style.opacity = "0.5"
       }
     })
-    canvas.onclick = function(event) {
-      if (event.target != document.getElementById(currentPixel)) {
+    window.onclick = function(event) {
+      if (event.target != document.getElementById(currentPixel) && event.target != document.querySelector(".sidebar")) {
     var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k) {
       elems[k].style.opacity = "1"
     })
     currentPixel = false;
-canvas.onclick = null
+window.onclick = null
       }
 } 
   }
