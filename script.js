@@ -76,10 +76,36 @@ addEventListener("keydown", function(event) {
 function save() {
   var name = prompt("Name:")
   if (name) {
-    localStorage.setItem(name,canvas.innerHTML)
+    localStorage.setItem(name,"{'pxsize':" + pxsize + ",'pnum':" + pnum + ",'back':'" + canvas.style.background + "','content':'" + canvas.innerHTML + "'}")
   }
 }
 
 if (sessionStorage.getItem("session")) {
-  canvas.innerHTML = sessionStorage.getItem("session")
+  var sjson = JSON.parse(sessionStorage.getItem("session"))
+  canvas.innerHTML = sjson.content
+  pxsize = sjson.pxsize
+  pnum = sjson.pnum
+  canvas.style.background = sjson.back
+  var elems = document.querySelectorAll(".pixel")
+    Object.keys(elems).forEach(function (k) {
+      elems[k].onclick = function() {
+    currentPixel = this.id; 
+    var elems = document.querySelectorAll(".pixel")
+    Object.keys(elems).forEach(function (k,elem2) {
+      if (elems[k].id != currentPixel) {
+        elems[k].style.opacity = "0.5"
+      }
+    })
+    canvas.onclick = function(event) {
+      if (event.target != document.getElementById(currentPixel)) {
+    var elems = document.querySelectorAll(".pixel")
+    Object.keys(elems).forEach(function (k) {
+      elems[k].style.opacity = "1"
+    })
+    currentPixel = false;
+canvas.onclick = null
+      }
+} 
+  }
+    })
 }
