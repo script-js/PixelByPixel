@@ -68,16 +68,9 @@ function color() {
 }
 
 addEventListener("keydown", function(event) {
-  if (event.ctrlKey) {
-    if (event.key == "z") {
+  if (event.ctrlKey && event.key == "z") {
       redoColor[(redoColor.length + 1)] = document.getElementById("pixel" + (pnum - 1)).style.backgroundColor;
       document.getElementById("pixel" + (pnum - 1)).remove();
       pnum -= 1;
-    } else if (event.key == "y") {
-      if (redoColor[0]) {
-        drawPixel(redoColor[0])
-        delete redoColor[0]
-      }
-    }
   }
 });
