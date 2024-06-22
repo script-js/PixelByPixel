@@ -27,9 +27,11 @@
         display: none;
         align-items: center;
         justify-content: center;
-        padding: 15%;
+        width: 100%;
+        height: 100%
         position: absolute;
         top: 0;
+        opacity: 0;
       }
     </style>
   </head>
@@ -41,7 +43,7 @@
     Object.keys(localStorage).forEach(function(k) {
       var newcanvas = document.createElement("div")
       newcanvas.innerHTML = "<div class='ctx'><div style='text-align:center'><button onclick='printToFile(this.parentElement.parentElement)'>Download</button><p></p><button onclick='deleteDrawing(this.parentElement.parentElement)'>Delete</button></div></div><div id='canvas' oncontextmenu='ctxm(this)' onclick='openD(this)'>" + JSON.parse(localStorage.getItem(k)).content + "</div><h2>" + k + "</h2>"
-      newcanvas.style = "text-align:center;width:22%;"
+      newcanvas.style = "text-align:center;width:22%;position:relative;"
       newcanvas.setAttribute("sessionData",localStorage.getItem(k))
       flex.appendChild(newcanvas)
     })
@@ -67,7 +69,7 @@
       function ctxm(elem) {
         var overlay = elem.parentElement.querySelector(".ctx")
         overlay.style.display = "flex"
-        setTimeout(function() {overlay.style.opacity = "0.7"},10)
+        setTimeout(function() {overlay.style.opacity = "0.7"},50)
         window.onclick = function(event) {
           if (event.target != overlay) {
             overlay.style.opacity = "0"
