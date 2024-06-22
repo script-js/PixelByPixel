@@ -41,7 +41,7 @@ function drawPixel(clr) {
       }
     })
     canvas.onclick = function(event) {
-      if (event.target != document.getElementById(currentPixel) && event.target != document.querySelector(".sidebar")) {
+      if (event.target != document.getElementById(currentPixel)) {
     var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k) {
       elems[k].style.opacity = "1"
@@ -115,7 +115,7 @@ if (sessionStorage.getItem("session")) {
       }
     })
     canvas.onclick = function(event) {
-      if (event.target != document.getElementById(currentPixel) {
+      if (event.target != document.getElementById(currentPixel)) {
     var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k) {
       elems[k].style.opacity = "1"
