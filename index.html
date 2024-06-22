@@ -56,7 +56,7 @@
     function printToFile(div1) {
       console.log(div1)
     var div = div1.parentElement.querySelector("#canvas");
-    var title = div1.parentElement.querySelector("h1").innerHTML
+    var title = div1.parentElement.querySelector("h2").innerHTML
     html2canvas(div, {
         onrendered: function (canvas) {
             var myImage = canvas.toDataURL("image/png");
@@ -81,7 +81,7 @@
       }
 
     function deleteDrawing(elem) {
-      localStorage.setItem(elem.parentElement.querySelector("h1").innerHTML,"")
+      localStorage.setItem(elem.parentElement.querySelector("h2").innerHTML,"")
       location.reload()
     }
   </script>
