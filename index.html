@@ -16,9 +16,10 @@
   </body>
   <script>
     Object.keys(localStorage).forEach(function(k) {
-
       var newcanvas = document.createElement("div")
-      newcanvas.innerHTML = "<div id='canvas' on click=''>"
+      newcanvas.innerHTML = "<div id='canvas' onclick='open(this)'>" + localStorage.getItem(k) + "</div><h2>" + k + "</h2>"
+      newcanvas.style = "text-align:center"
+      document.body.appendChild(newcanvas)
     })
   </script>
 </html>
