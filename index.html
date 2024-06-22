@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css" />
     <style>
       * {color:white}
-      #canvas {width: 25%;}
+      #canvas {width: 100%;}
       .pixel:hover {opacity:1}
     </style>
   </head>
@@ -22,8 +22,8 @@
   <script>
     Object.keys(localStorage).forEach(function(k) {
       var newcanvas = document.createElement("div")
-      newcanvas.innerHTML = "<div id='canvas'  onclick='openD(this)'>" + JSON.parse(localStorage.getItem(k)).content + "</div><h2>" + k + "</h2>"
-      newcanvas.style = "text-align:center"
+      newcanvas.innerHTML = "<div id='canvas' onclick='openD(this)'>" + JSON.parse(localStorage.getItem(k)).content + "</div><h2>" + k + "</h2>"
+      newcanvas.style = "text-align:center;width:25%;"
       newcanvas.setAttribute("sessionData",localStorage.getItem(k))
       document.body.appendChild(newcanvas)
     })
