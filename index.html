@@ -86,7 +86,7 @@
       }
 
     function deleteDrawing(elem) {
-      localStorage.setItem(elem.parentElement.querySelector("h2").innerHTML,"")
+      localStorage.removeItem(elem.parentElement.querySelector("h2").innerHTML)
       location.reload()
     }
   </script>
