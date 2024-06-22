@@ -74,7 +74,7 @@ addEventListener("keydown", function(event) {
 
 function getFileLink() {
     return html2canvas(canvas).then(function(result) {
-      var myImage = canvas.toDataURL("image/png");
+      var myImage = result.toDataURL("image/png");
       return "data:" + myImage;
     });
 }
