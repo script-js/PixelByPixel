@@ -63,6 +63,7 @@ function color() {
   } else {
     drawPixel(colorType.value)
   }
+  sessionStorage.setItem("session",canvas.innerHTML)
 }
 
 addEventListener("keydown", function(event) {
@@ -72,16 +73,13 @@ addEventListener("keydown", function(event) {
   }
 });
 
-function getFileLink() {
-    return html2canvas(canvas).then(function(result) {
-      var myImage = result.toDataURL("image/png");
-      return myImage;
-    });
-}
-
 function save() {
   var name = prompt("Name:")
   if (name) {
     localStorage.setItem(name,canvas.innerHTML)
   }
+}
+
+if (sessionStorage.getItem("session")) {
+  canvas.innerHTML = sessionStorage.getItem("session")
 }
