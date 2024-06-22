@@ -53,6 +53,7 @@ canvas.onclick = null
 }
 
 function color() {
+  redoColor = []
   if (currentPixel) {
     document.getElementById(currentPixel).style.background = colorType.value
     var elems = document.querySelectorAll(".pixel")
