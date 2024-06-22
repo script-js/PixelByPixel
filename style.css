@@ -9,10 +9,6 @@
   animation: appear ease 100ms;
 }
 
-.pixel:hover {
-  opacity: 0.7;
-}
-
 #canvas {
   width: 78%;
   border: 1px solid black;
@@ -21,6 +17,12 @@
   background: white;
   transition: ease 100ms;
   font-size: 0px;
+}
+
+#canvas:hover {
+  .pixel {
+   outline: 1px solid black;
+  }
 }
 
 body,html {
