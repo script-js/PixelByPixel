@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+    function getFileLink() {
+    return html2canvas(canvas).then(function(result) {
+      var myImage = result.toDataURL("image/png");
+      return myImage;
+    });
+}
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+  </body>
+</html>
