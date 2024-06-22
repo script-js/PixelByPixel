@@ -71,3 +71,14 @@ addEventListener("keydown", function(event) {
       pnum -= 1;
   }
 });
+
+function printToFile() {
+    html2canvas(canvas, {
+        onrendered: function (canvas) {
+            var myImage = canvas.toDataURL("image/png");
+            var link = document.createElement("a");
+            link.download = "canvas.png";
+            link.href = "data:" + myImage;
+            link.click();
+        }
+    });
