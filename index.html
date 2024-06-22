@@ -26,13 +26,13 @@
   </head>
   <body style="background:#212121">
     <h1>Library</h1>
-    <div id="flex"><div style="text-align:center;width:20%;"><svg onclick="open(this)" sessionData="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M12 4V20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg><h2>New</h2></div></div>
+    <div id="flex"><div style="text-align:center;width:23%;"><svg onclick="openD(this)" sessionData="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M12 4V20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg><h2>New</h2></div></div>
   </body>
   <script>
     Object.keys(localStorage).forEach(function(k) {
       var newcanvas = document.createElement("div")
       newcanvas.innerHTML = "<div id='canvas' onclick='openD(this)'>" + JSON.parse(localStorage.getItem(k)).content + "</div><h2>" + k + "</h2>"
-      newcanvas.style = "text-align:center;width:20%;"
+      newcanvas.style = "text-align:center;width:23%;"
       newcanvas.setAttribute("sessionData",localStorage.getItem(k))
       flex.appendChild(newcanvas)
     })
