@@ -130,8 +130,3 @@ function getSessionJSON() {
   vari.aspect = aspect
   return JSON.stringify(vari)
 }
-
-window.addEventListener("beforeunload", function(event) {
-  event.preventDefault();
-  event.returnValue = true;
-})
