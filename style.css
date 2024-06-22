@@ -50,7 +50,7 @@ input[type="color"] {
   border-radius: 0;
 }
 
-input,button {
+input,button,select {
   background: #3b3b3b;
   color: white;
   border: 1px solid white;
@@ -58,7 +58,7 @@ input,button {
   transition: ease 150ms;
 }
 
-input:hover,button:hover {
+input:hover,button:hover,select:hover {
   border-radius: 2px;
 }
 
