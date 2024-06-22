@@ -22,7 +22,7 @@ function resize(digit) {
 }
 
 function aratio(ratio) {
-  aspect = ratoi
+  aspect = ratio
   canvas.style.aspectRatio = aspect.replace(":"," / ")
 }
 
