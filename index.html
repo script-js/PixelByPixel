@@ -42,7 +42,7 @@
   <script>
     Object.keys(localStorage).forEach(function(k) {
       var newcanvas = document.createElement("div")
-      newcanvas.innerHTML = "<div class='ctx'><div style='text-align:center'><button onclick='printToFile(this.parentElement.parentElement)'>Download</button><p></p><button onclick='deleteDrawing(this.parentElement.parentElement)'>Delete</button></div></div><div id='canvas' oncontextmenu='ctxm(this)' onclick='openD(this)'>" + JSON.parse(localStorage.getItem(k)).content + "</div><h2>" + k + "</h2>"
+      newcanvas.innerHTML = "<div class='ctx'><div style='text-align:center'><button onclick='printToFile(this.parentElement.parentElement)'>Download</button><p></p><button onclick='deleteDrawing(this.parentElement.parentElement)'>Delete</button></div></div><div id='canvas' oncontextmenu='ctxm(this)' style='aspect-ratio:" + JSON.parse(localStorage.getItem(k)).aspect.replace(":"," / ") + "' onclick='openD(this)'>" + JSON.parse(localStorage.getItem(k)).content + "</div><h2>" + k + "</h2>"
       newcanvas.style = "text-align:center;width:22%;position:relative;"
       newcanvas.setAttribute("sessionData",localStorage.getItem(k))
       flex.appendChild(newcanvas)
