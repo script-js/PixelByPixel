@@ -77,7 +77,14 @@ addEventListener("keydown", function(event) {
 function save() {
   var name = prompt("Name:")
   if (name) {
-    localStorage.setItem(name,getSessionJSON())
+    if (localStorage.getItem(name)) {
+      var con1 = confirm("There is an already existing drawing with the same name. Would you like to overwrite it?")
+      if (con1) {
+        localStorage.setItem(name,getSessionJSON())
+      }
+    } else {
+      localStorage.setItem(name,getSessionJSON())
+    }
   }
 }
 
