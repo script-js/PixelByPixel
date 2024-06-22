@@ -1,5 +1,6 @@
 var size = 78;
 var pnum = 0;
+var aspect = "1:1"
 var currentPixel = false;
 var pxsize = 10;
 document.querySelectorAll("input[type='range']")[0].value = size
@@ -21,7 +22,8 @@ function resize(digit) {
 }
 
 function aratio(ratio) {
-  canvas.style.aspectRatio = ratio.replace(":"," / ")
+  aspect = ratoi
+  canvas.style.aspectRatio = aspect.replace(":"," / ")
 }
 
 function drawPixel(clr) {
@@ -93,6 +95,7 @@ if (sessionStorage.getItem("session")) {
   canvas.innerHTML = sjson.content
   pxsize = sjson.pxsize
   pnum = sjson.pnum
+  canvas.style.aspectRatio = sjson.aspect.replace(":"," / ")
   canvas.style.background = sjson.back
   var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k) {
@@ -124,5 +127,6 @@ function getSessionJSON() {
   vari.pnum = pnum
   vari.content = canvas.innerHTML
   vari.back = canvas.style.background
+  vari.aspect = aspect
   return JSON.stringify(vari)
 }
