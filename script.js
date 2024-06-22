@@ -72,14 +72,18 @@ addEventListener("keydown", function(event) {
   }
 });
 
-function printToFile() {
-    html2canvas(canvas, {
+function getFileLink() {
+    return html2canvas(canvas, {
         onrendered: function (canvas) {
             var myImage = canvas.toDataURL("image/png");
-            var link = document.createElement("a");
-            link.download = "canvas.png";
-            link.href = "data:" + myImage;
-            link.click();
+            return "data:" + myImage;
         }
     });
+}
+
+function save() {
+  var name = prompt("Name:")
+  if (name) {
+    localStorage.setItem(name,canvas.innerHTML)
+  }
 }
