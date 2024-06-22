@@ -22,13 +22,14 @@
   <script>
     Object.keys(localStorage).forEach(function(k) {
       var newcanvas = document.createElement("div")
-      newcanvas.innerHTML = "<div id='canvas' onclick='open(this)'>" + localStorage.getItem(k) + "</div><h2>" + k + "</h2>"
+      newcanvas.innerHTML = "<div id='canvas'  onclick='open(this)'>" + JSON.parse(localStorage.getItem(k)).content + "</div><h2>" + k + "</h2>"
       newcanvas.style = "text-align:center"
+      newcanvas.setAttribute("sessionData",localStorage.getItem(k))
       document.body.appendChild(newcanvas)
     })
 
     function open(elem) {
-      sessionStorage.setItem("session",elem.innerHTML)
+      sessionStorage.setItem("session",elem.parentElement.getAttribute("sessionData"))
       location.href = "canvas"
     }
   </script>
