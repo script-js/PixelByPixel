@@ -82,3 +82,4 @@ function printToFile() {
             link.click();
         }
     });
+}
