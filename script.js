@@ -63,7 +63,7 @@ function color() {
   } else {
     drawPixel(colorType.value)
   }
-  sessionStorage.setItem("session",canvas.innerHTML)
+  sessionStorage.setItem("session","{'pxsize':" + pxsize + ",'pnum':" + pnum + ",'back':'" + canvas.style.background + "','content':'" + canvas.innerHTML + "'}")
 }
 
 addEventListener("keydown", function(event) {
