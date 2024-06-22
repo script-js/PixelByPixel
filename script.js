@@ -11,12 +11,13 @@ function resize(digit) {
   case "3": pxsize = 4; break;
   case "2": pxsize = 5; break;
   case "1": pxsize = 10; break;
-}
+  }
 
   var elems = document.querySelectorAll(".pixel")
   Object.keys(elems).forEach(function (k) {
     elems[k].style.width = pxsize + "%"
   })
+  sessionStorage.setItem("session",getSessionJSON())
 }
 
 function aratio(ratio) {
