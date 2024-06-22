@@ -25,5 +25,10 @@
       newcanvas.style = "text-align:center"
       document.body.appendChild(newcanvas)
     })
+
+    function open(elem) {
+      sessionStorage.setItem("session",elem.innerHTML)
+      location.href = "canvas"
+    }
   </script>
 </html>
