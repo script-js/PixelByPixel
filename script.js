@@ -63,7 +63,7 @@ function color() {
   } else {
     drawPixel(colorType.value)
   }
-  sessionStorage.setItem("session","{'pxsize':" + pxsize + ",'pnum':" + pnum + ",'back':'" + canvas.style.background + "','content':'" + canvas.innerHTML + "'}")
+  sessionStorage.setItem("session",getSessionJSON())
 }
 
 addEventListener("keydown", function(event) {
@@ -76,7 +76,7 @@ addEventListener("keydown", function(event) {
 function save() {
   var name = prompt("Name:")
   if (name) {
-    localStorage.setItem(name,"{'pxsize':" + pxsize + ",'pnum':" + pnum + ",'back':'" + canvas.style.background + "','content':'" + canvas.innerHTML + "'}")
+    localStorage.setItem(name,getSessionJSON())
   }
 }
 
@@ -108,4 +108,13 @@ canvas.onclick = null
 } 
   }
     })
+}
+
+function getSessionJSON() {
+  var vari = {}
+  vari.pxsize = pxsize
+  vari.pnum = pnum
+  vari.content = canvas.innerHTML
+  vari.back = canvas.style.background
+  return JSON.stringify(vari)
 }
