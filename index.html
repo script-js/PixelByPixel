@@ -25,7 +25,7 @@
 
       .ctx {
         transition: ease 100ms;
-        background: black;
+        background: rgba(0,0,0,0.7);
         display: none;
         align-items: center;
         justify-content: center;
@@ -76,7 +76,7 @@
       function ctxm(elem) {
         var overlay = elem.parentElement.querySelector(".ctx")
         overlay.style.display = "flex"
-        setTimeout(function() {overlay.style.opacity = "0.7"},50)
+        setTimeout(function() {overlay.style.opacity = "1"},50)
         window.onclick = function(event) {
           if (event.target != overlay) {
             overlay.style.opacity = "0"
