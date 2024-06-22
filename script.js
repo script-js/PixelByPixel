@@ -41,7 +41,7 @@ function drawPixel(clr) {
       }
     })
     window.onclick = function(event) {
-      if (event.target != document.getElementById(currentPixel)) {
+      if (event.target != document.getElementById(currentPixel) && event.target != document.querySelector(".sidebar")) {
     var elems = document.querySelectorAll(".pixel")
     Object.keys(elems).forEach(function (k) {
       elems[k].style.opacity = "1"
